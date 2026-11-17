@@ -1,16 +1,15 @@
 # tiny-chess-01
 
-A chess engine for the `tiny-chess-01` bounty: the strongest engine I could fit in
-4 KB of Python.
+[![make.fun · tiny-chess-01](https://make.fun/badge/tiny-chess-01.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+[![rank](https://make.fun/badge/tiny-chess-01/obvirm/tiny-chess-01-entry/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+[![reward](https://make.fun/badge/tiny-chess-01/obvirm/tiny-chess-01-entry/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 
-- 0x88 board; pieces and moves are packed into small integers.
-- Alpha-beta with iterative deepening, a transposition table, killer and history
-  move ordering, and a quiescence search over captures and promotions.
-- Evaluation: material, piece-square tables and the bishop pair.
-- Deterministic on purpose: a fixed node budget, never a clock and never randomness,
-  so a replay reproduces the same moves.
-- It speaks the contest env protocol directly over HTTP (`/game`, `/move`).
+A chess engine for the make.fun bounty: 0x88 board, alpha-beta search with
+iterative deepening, transposition table, killer-ordered moves and a quiescence
+search. The engine uses a fixed node budget instead of a clock, so it is
+deterministic across live and replay trials.
 
-`main.py` is the whole engine: an LZMA payload of the source plus the competition's
-own unpacker stub, produced by the kit's `makefun compress`. The readable source
-travels with the entry's build transcripts.
+`main.py` is the whole engine, packed with the competition's own `makefun compress`.
+The readable source travels with the entry's build transcripts.
+
+Run: `python3 -P -s main.py` with `MAKEFUN_ENV_URL` provided by the contest env.
