@@ -5,7 +5,7 @@
 [![reward](https://make.fun/badge/tiny-chess-01/obvirm/tiny-chess-01-entry/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 
 A chess engine for the make.fun bounty: 0x88 board, alpha-beta search with
-iterative deepening, transposition table, killer-ordered moves and a quiescence
+iterative deepening, transposition table, MVV-LVA ordered moves and a quiescence
 search. The engine uses a fixed node budget instead of a clock, so it is
 deterministic across live and replay trials.
 
